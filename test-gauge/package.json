@@ -1,0 +1,11 @@
+{
+	"name": "todo-app-accaptance-test",
+	"description": "Todo app accaptance test with gauge+taiko",
+	"scripts": {
+		"test": "gauge run specs/"
+	},
+	"dependencies": {
+		"gauge": "^4.0.0",
+		"taiko": "latest"
+	}
+}
