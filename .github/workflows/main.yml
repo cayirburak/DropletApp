@@ -7,6 +7,8 @@ on:
 jobs:
   client:
     runs-on: self-hosted
+    env:
+        VUE_APP_API_URL: http://localhost:5000/api/todos
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -19,6 +21,8 @@ jobs:
 
   api:
     runs-on: self-hosted
+    env:
+        MONGO_URL: 'mongodb+srv://burak:burak@cluster0.d5tzt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
