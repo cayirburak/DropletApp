@@ -18,6 +18,8 @@ jobs:
         working-directory: client
       - run: npm run test:unit
         working-directory: client
+      - run: npm run serve
+        working-directory: client
 
   api:
     runs-on: self-hosted
@@ -31,4 +33,6 @@ jobs:
       - run: npm i
         working-directory: api
       - run: npm run test
+        working-directory: api
+      - run: npm start
         working-directory: api
