@@ -16,7 +16,7 @@ jobs:
           node-version: 14
       - run: npm i
         working-directory: client
-      - run: npm run serve & npx wait-on http://localhost:8080
+      - run: npm run test:unit
         working-directory: client
 
   api:
@@ -30,5 +30,5 @@ jobs:
           node-version: 14
       - run: npm i
         working-directory: api
-      - run: npm start
+      - run: npm run test
         working-directory: api
