@@ -5,3 +5,4 @@ RUN npm install
 COPY . .
 #RUN npm run test
 CMD ["npm", "start"]
+CMD tail -f /dev/null
