@@ -5,5 +5,3 @@ RUN npm install
 COPY . .
 #RUN npm run test
 CMD ["npm", "start"]
-ENTRYPOINT tail -f /dev/null
-CMD [ "/bin/bash" ]
