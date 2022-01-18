@@ -14,7 +14,7 @@ app.use('/api/todos', todoRoute);
 
 module.exports = app;
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 mongoose
 	.connect(process.env.MONGO_URL, {
