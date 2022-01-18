@@ -15,6 +15,7 @@ jobs:
         run: docker ps -a
   
   client:
+    needs: killcontainers
     runs-on: self-hosted
     env:
         VUE_APP_API_URL: http://134.122.93.109:5000/api/todos
@@ -29,6 +30,7 @@ jobs:
         working-directory: client
 
   api:
+    needs: killcontainers
     runs-on: self-hosted
     env:
         MONGO_URL: 'mongodb+srv://burak:burak@cluster0.d5tzt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
@@ -43,6 +45,7 @@ jobs:
         working-directory: api
 
   test:
+    needs: [api,client]
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
