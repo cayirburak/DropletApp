@@ -34,7 +34,7 @@ jobs:
         working-directory: api
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
