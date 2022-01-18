@@ -5,16 +5,6 @@ on:
     branches: [ master ]
     
 jobs:
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build the stack
-        run: docker-compose -f "docker-compose.yml" up -d --build
-      - name: Check running containers
-        run: docker ps -a
-        
   client:
     runs-on: self-hosted
     env:
@@ -43,3 +33,11 @@ jobs:
       - run: npm run test
         working-directory: api
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose -f "docker-compose.yml" up -d --build
+      - name: Check running containers
+        run: docker ps -a
