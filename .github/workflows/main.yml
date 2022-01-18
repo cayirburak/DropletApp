@@ -8,7 +8,7 @@ jobs:
   client:
     runs-on: self-hosted
     env:
-        VUE_APP_API_URL: http://134.122.93.109/:5000/api/todos
+        VUE_APP_API_URL: http://134.122.93.109:5000/api/todos
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
